@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f2f0"
+    tools:context=".create_an_account">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        android:tint="#6F000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/group917" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/daarlogo" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/droid"
+        android:text="انشاء حساب"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/droid"
+        android:text="انشى حساب الأن للخصول على ميزات التطبيق"
+        android:textColor="@android:color/background_light"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/linear_layout"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/text_design"
+            android:ems="10"
+            android:fontFamily="@font/droid"
+            android:gravity="right"
+            android:hint="الاسم الكامل"
+            android:inputType="textPersonName"
+            android:paddingTop="5pt"
+            android:paddingRight="5pt"
+            android:textAlignment="gravity"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/text_design"
+            android:ems="10"
+            android:fontFamily="@font/droid"
+            android:gravity="right"
+            android:hint="البريد الالكتروني"
+            android:inputType="textEmailAddress"
+            android:paddingTop="5pt"
+            android:paddingRight="5pt"
+            android:textAlignment="gravity"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/edphone_number"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/text_design"
+            android:ems="10"
+            android:fontFamily="@font/droid"
+            android:gravity="right"
+            android:hint="رقم المويايل"
+            android:inputType="phone"
+            android:paddingTop="5pt"
+            android:paddingRight="5pt"
+            android:textAlignment="gravity"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/text_design"
+            android:ems="10"
+            android:fontFamily="@font/droid"
+            android:gravity="right"
+            android:hint="كلمة المرور"
+            android:inputType="textPassword"
+            android:paddingTop="5pt"
+            android:paddingRight="5pt"
+            android:textAlignment="gravity"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/ed_password_confirmation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/text_design"
+            android:ems="10"
+            android:fontFamily="@font/droid"
+            android:gravity="right"
+            android:hint="تاكيد كلمة المرور"
+            android:inputType="textPassword"
+            android:paddingTop="5pt"
+            android:paddingRight="5pt"
+            android:textAlignment="gravity"
+            android:textSize="12sp" />
+
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/buttonlogin"
+            android:fontFamily="@font/droid"
+            android:text="انشاء حساب"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:padding="10dp"
+            android:visibility="gone"
+
+            android:indeterminateTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/droid"
+                android:text=" لديك حساب؟"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.62"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/droid"
+                android:text="سجل دخول الان"
+                android:textColor="@android:color/background_dark"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

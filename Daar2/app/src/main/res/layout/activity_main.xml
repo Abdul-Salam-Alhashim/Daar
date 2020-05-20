@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"
+    >
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:fitsSystemWindows="false"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        app:theme="@style/ThemeOverlay.AppCompat.navTheme" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f2f0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f4f2f0">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="13dp"
+                android:fillViewport="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/droid"
+                android:text="اخر الاخبار"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recucler_home"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27"
+                tools:itemCount="50" />
+
+
+            <TextView
+
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/droid"
+                android:text="يمكنك استعراض اخر المشاريع هنا"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp"
+                android:fontFamily="@font/droid"
+                android:paddingRight="1pt"
+                android:text="من هنا يمكنك استعراض اخر الاخبار"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/droid"
+                android:text="المشاريع"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageView16"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView16"
+                app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="13dp"
+                android:padding="7dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                app:srcCompat="@drawable/hello" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="20dp"
+                android:padding="7dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/hello" />
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                app:auto_cycle="true"
+                app:corner_radius="0"
+                app:delay="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:period="1000"
+                app:selected_dot="@drawable/default_selected_dot"
+                app:unselected_dot="@drawable/default_unselected_dot" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:background="#00711313"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/AppTheme.NoActionBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/group"
+                app:title="Daar"
+                app:titleTextColor="#00750E0E" />
+
+            <ImageView
+                android:id="@+id/image_res"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="58dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/daarlogo" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="-6dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/linear_layout"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/image_slider"
+                app:layout_constraintTop_toBottomOf="@+id/image_slider">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/droid"
+                    android:paddingTop="5pt"
+                    android:paddingRight="5pt"
+                    android:text="خدماتنا"
+                    android:textColor="@color/design_default_color_on_secondary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5pt"
+                    android:fontFamily="@font/droid"
+                    android:paddingRight="5pt"
+                    android:text="اختر الخدمة التي تتناسب مع احتياجاتك"
+                    android:textColor="@color/design_default_color_on_secondary" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#aeaeae" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="47dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/imageButton3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:layout_marginTop="25dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/services"
+                            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                            app:layout_constraintStart_toEndOf="@+id/imageButton4"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/rental" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginEnd="35dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/services"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/loan" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/services"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.064"
+                            app:layout_constraintStart_toEndOf="@+id/imageButton2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/review" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/services"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/consultation" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/droid"
+                            android:text="بيع"
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageButton"
+                            app:layout_constraintStart_toStartOf="@+id/imageButton"
+                            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/droid"
+                            android:text="تأجير"
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+                            app:layout_constraintStart_toStartOf="@+id/imageButton3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/droid"
+                            android:text="تقييم"
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+                            app:layout_constraintStart_toStartOf="@+id/imageButton4"
+                            app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:fontFamily="@font/droid"
+                            android:text="استشارات"
+                            android:textColor="@color/design_default_color_on_secondary"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+                            app:layout_constraintStart_toEndOf="@+id/imageButton2"
+                            app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+ </androidx.drawerlayout.widget.DrawerLayout>
